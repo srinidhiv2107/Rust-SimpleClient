@@ -86,7 +86,7 @@ async fn cache_mode(args: &[String]) -> Result<(), Box<dyn std::error::Error>> {
     let average = sum / times as f64;
 
     let mut file = file.lock().await;
-    writeln!(&mut file, "Cache complete. The average USD price of BTC on Coinbase is: {}", average)?;
+    writeln!(&mut file, "The average USD price of BTC on Coinbase is: {}", average)?;
 
     println!("Cache complete. The average USD price of BTC on Coinbase is: {}", average);
 
